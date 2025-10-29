@@ -9,7 +9,7 @@ setup(
         "numpy>=1.25",
         "pandas>=2.0"
     ],
-    python_requires=">=3.10",
+    python_requires=">=3.9",
     description="Shared Option Features and Utilities for ML Pipelines",
     author="Davis Kim",
 )
