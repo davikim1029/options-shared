@@ -1,11 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel,Field
 from typing import Optional
 from datetime import datetime,timezone
 
 class OptionFeature(BaseModel):
     symbol: str
     osiKey: str
-    timestamp: datetime = datetime.now(timezone.utc)  # automatically set to current UTC time
     optionType: int  # 1 = CALL, 0 = PUT
     strikePrice: float
     lastPrice: float
@@ -27,3 +26,5 @@ class OptionFeature(BaseModel):
     spread: Optional[float] = None
     midPrice: Optional[float] = None
     moneyness: Optional[float] = None
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
+
