@@ -1,5 +1,5 @@
 from cryptography.fernet import Fernet
-from services.utils import get_boolean_input
+from shared_options.services.utils import get_boolean_input
 import os
 
 def createEncryptionKey():
