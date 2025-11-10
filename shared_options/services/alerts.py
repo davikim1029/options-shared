@@ -5,7 +5,7 @@ import time
 from email.mime.text import MIMEText
 from cryptography.fernet import Fernet
 from dotenv import load_dotenv
-from services.logging.logger_singleton import getLogger
+from shared_options.log.logger_singleton import getLogger
 
 logger = getLogger()
 

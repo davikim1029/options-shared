@@ -1,6 +1,6 @@
 #Account.py
 from __future__ import annotations
-from models.generated.Position import Position
+from shared_options.models.Position import Position
 from dataclasses import dataclass
 from typing import Optional, List
 

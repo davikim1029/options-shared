@@ -3,7 +3,7 @@ import json
 import os
 import time
 from threading import Lock
-from services.logging.logger_singleton import getLogger  # assuming you already use logger
+from shared_options.log.logger_singleton import getLogger  # assuming you already use logger
 
 class TokenStatus:
     def __init__(self, filepath="encryption/token_status.json"):

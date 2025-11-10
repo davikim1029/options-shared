@@ -1,7 +1,7 @@
 #Position.py
 from __future__ import annotations
-from models.generated.Product import Product
-from models.generated.Quick import Quick
+from shared_options.models.Product import Product
+from shared_options.models.Quick import Quick
 from dataclasses import dataclass
 from typing import Optional, List
 

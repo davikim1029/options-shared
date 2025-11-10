@@ -7,16 +7,16 @@ from datetime import datetime, timezone
 from cryptography.fernet import Fernet
 from requests_oauthlib import OAuth1Session
 from urllib.parse import urlencode
-from models.generated.Account import Account, PortfolioAccount
-from models.generated.Position import Position
-from models.option import OptionContract,Product,Quick,OptionGreeks,ProductId
+from shared_options.models.Account import Account, PortfolioAccount
+from shared_options.models.Position import Position
+from shared_options.models.option import OptionContract,Product,Quick,OptionGreeks,ProductId
 from services.threading.api_worker import ApiWorker,HttpMethod
-from services.logging.logger_singleton import getLogger
-from services.token_status import TokenStatus
-from services.utils import write_scratch
+from shared_options.log.logger_singleton import getLogger
+from shared_options.services.token_status import TokenStatus
+from shared_options.services.utils import write_scratch
 import enum
-from services.utils import is_interactive
-from services.alerts import send_alert
+from shared_options.services.utils import is_interactive
+from shared_options.services.alerts import send_alert
 
 TOKEN_LIFETIME_DAYS = 90
 

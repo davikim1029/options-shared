@@ -3,7 +3,7 @@ import requests
 import json
 from datetime import datetime
 from services.core.cache_manager import TickerCache
-from services.logging.logger_singleton import getLogger
+from shared_options.log.logger_singleton import getLogger
 
 
 def fetch_us_tickers_from_finnhub(ticker_cache: TickerCache):

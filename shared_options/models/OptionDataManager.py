@@ -2,7 +2,7 @@ import threading
 import time
 from pathlib import Path
 from services.core.file_manager import FileManager
-from services.logging.logger_singleton import getLogger
+from shared_options.log.logger_singleton import getLogger
 
 
 class OptionDataManager:

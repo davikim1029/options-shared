@@ -1,6 +1,6 @@
 #Product.py
 from __future__ import annotations
-from models.generated.ProductId import ProductId
+from shared_options.models.ProductId import ProductId
 from dataclasses import dataclass
 from typing import Optional, List
 

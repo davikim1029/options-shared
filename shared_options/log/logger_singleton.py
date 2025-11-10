@@ -1,4 +1,4 @@
-from services.logging.logger import Logger
+from shared_options.log.logger import Logger
 from services.core.shutdown_handler import ShutdownManager
 
 _logger = None

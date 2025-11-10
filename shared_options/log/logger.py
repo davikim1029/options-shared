@@ -2,6 +2,7 @@
 import logging
 import os
 from datetime import datetime
+import sys
 
 class Logger:
     def __init__(self, log_dir="logs", prefix="log"):
@@ -32,6 +33,8 @@ class Logger:
 
     def logMessage(self, message, console=False, file=True):
         # Temporarily enable/disable handlers
+        if is_interactive():
+            console = True
         self._file_handler.setLevel(logging.INFO if file else logging.CRITICAL+1)
         self._console_handler.setLevel(logging.INFO if console else logging.CRITICAL+1)
         self.logger.info(message)
@@ -43,3 +46,12 @@ class Logger:
 
     def _log_exit(self, reason=None):
         self.log(f"Script terminated ({reason})")
+
+
+
+def is_interactive():
+    """Detects whether this process is running interactively (e.g., not as a daemon)."""
+    try:
+        return sys.stdin.isatty() and sys.stdout.isatty()
+    except Exception:
+        return False

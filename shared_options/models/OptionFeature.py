@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from dataclasses import asdict as dataclass_asdict
 
 
-class OptionFeatures(BaseModel):
+class OptionFeature(BaseModel):
     symbol: str
     osiKey: Optional[str] = None
     optionType: int                     # 1 = CALL, 0 = PUT
