@@ -6,8 +6,8 @@ from datetime import datetime, timezone
 from cryptography.fernet import Fernet
 from requests_oauthlib import OAuth1Session
 from urllib.parse import urlencode
-from models.generated.Account import Account, PortfolioAccount
-from models.generated.Position import Position
+from shared_options.models.Account import Account, PortfolioAccount
+from shared_options.models.Position import Position
 from models.option import OptionContract,Product,Quick,OptionGreeks,ProductId
 
 TOKEN_LIFETIME_DAYS = 90
