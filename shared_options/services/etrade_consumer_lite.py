@@ -8,7 +8,7 @@ from requests_oauthlib import OAuth1Session
 from urllib.parse import urlencode
 from shared_options.models.Account import Account, PortfolioAccount
 from shared_options.models.Position import Position
-from models.option import OptionContract,Product,Quick,OptionGreeks,ProductId
+from shared_options.models.option import OptionContract,Product,Quick,OptionGreeks,ProductId
 
 TOKEN_LIFETIME_DAYS = 90
 
