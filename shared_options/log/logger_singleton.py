@@ -1,5 +1,5 @@
 from shared_options.log.logger import Logger
-from services.core.shutdown_handler import ShutdownManager
+from shared_options.services.shutdown_handler import ShutdownManager
 
 _logger = None
 _registered = False
