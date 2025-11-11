@@ -485,3 +485,22 @@ def try_send(filepath: Path):
             logger.logMessage(f"[!] Server error {resp.status_code}: keeping file.")
     except Exception as e:
         logger.logMessage(f"[!] Network issue: could not send {filepath.name}. Error: {e}")
+
+
+def send_existing_files():
+    directory="data/option_data"
+    path = Path(directory)
+
+    if not path.exists():
+        raise FileNotFoundError(f"Directory not found: {path}")
+
+    # Filter for .json files that start with 'option_data_bundle_'
+    bundle_files = [
+        f
+        for f in path.iterdir()
+        if f.is_file()
+        and f.name.startswith("option_data_bundle_")
+        and f.suffix == ".json"
+    ]
+    for file in sorted(bundle_files):
+        try_send(file)
