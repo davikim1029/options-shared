@@ -2,3 +2,4 @@
 *__pycache__
 .DS_Store
 shared_options.egg-info/
+build/
