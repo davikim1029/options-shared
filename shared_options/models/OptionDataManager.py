@@ -1,7 +1,7 @@
 import threading
 import time
 from pathlib import Path
-from services.file_manager import FileManager
+from shared_options.services.file_manager import FileManager
 from shared_options.log.logger_singleton import getLogger
 
 
