@@ -20,6 +20,7 @@ import pandas_market_calendars as mcal
 import pytz
 import shutil
 
+
 def extract_features_from_snapshot(snapshot: Dict) -> OptionFeature:
     """Convert raw snapshot JSON to OptionFeature dataclass."""
     expiry_str = snapshot.get("expiryDate")
@@ -508,7 +509,7 @@ def send_existing_files():
 
 LOW_SPACE_BYTES = 200 * 1024 * 1024  # 200 MB warning threshold
 
-def check_disk_space(path: str | os.PathLike) -> tuple[bool, int]:
+def check_disk_space(path: Union[str, os.PathLike]) -> tuple[bool, int]:
     """
     Return (ok, free_bytes)
     ok=True if free space > LOW_SPACE_BYTES.
